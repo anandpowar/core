@@ -31,6 +31,7 @@ namespace RecipeApi
         {
             services.AddCors();
             services.AddControllers();
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
             services.AddDbContext<DataContext>(options =>
                 options.UseSqlServer(
